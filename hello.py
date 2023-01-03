@@ -42,3 +42,33 @@ for language in set(user_0.values()): print(language.title())
 
 # You can build a set directly using braces and separating the elements with commas:
 languages = {'python', 'ruby', 'python', 'c'}
+
+prompt = "If you tell us who you are, we can personalize the messages you see."
+prompt += "\nWhat is your first name? "
+name = input(prompt)
+
+height = input("How tall are you, in inches? ")
+height = int(height)
+
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+while 'cat' in pets:
+     pets.remove('cat')
+print(pets)
+
+
+def make_pizza(*toppings):
+    """Print the list of toppings that have been requested."""
+    print(toppings)
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user."""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+user_profile = build_profile('albert', 'einstein',
+                             location='princeton',
+                             field='physics')
+print(user_profile)
+#from module_name import function_name
